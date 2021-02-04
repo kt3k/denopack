@@ -17,7 +17,7 @@ jobs:
       - name: Setup latest deno version
         uses: denolib/setup-deno@v2
         with:
-          deno-version: v1.7.0
+          deno-version: v1.7.1
 
       - name: Format
         run: deno fmt --check
@@ -27,6 +27,9 @@ jobs:
 
       - name: Test install
         run: deno run --allow-run --allow-read ./install.ts
+
+      - name: Test run with --no-check option
+        run: deno run --allow-read --allow-env --unstable --no-check ./mod.ts
 
       - name: Test
         run: deno test --unstable -A

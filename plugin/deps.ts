@@ -5,4 +5,4 @@ export {
   dataToEsm,
   extractAssignedNames,
   makeLegalIdentifier,
-} from "https://cdn.dreg.dev/package/@rollup/pluginutils@4.0.0";
+} from "https://esm.sh/@rollup/pluginutils@4.0.0";
